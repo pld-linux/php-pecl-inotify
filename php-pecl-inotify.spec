@@ -10,6 +10,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	70d2759e3c66a4399f1156222c9e7500
 URL:		http://pecl.php.net/package/inotify/
+BuildRequires:	glibc-devel >= 6:2.4
 BuildRequires:	php-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
