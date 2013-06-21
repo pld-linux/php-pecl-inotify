@@ -1,8 +1,9 @@
+%define		php_name	php%{?php_suffix}
 %define		modname	inotify
 %define		status		stable
 Summary:	%{modname} - php bindings
 Summary(pl.UTF-8):	%{modname} - dowiązania php
-Name:		php-pecl-%{modname}
+Name:		%{php_name}-pecl-%{modname}
 Version:	0.1.6
 Release:	3
 License:	PHP 3.01
@@ -10,9 +11,9 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	c7d837c4837d8132c451c6ab37ef917e
 URL:		http://pecl.php.net/package/inotify/
+BuildRequires:	%{php_name}-devel >= 3:5.0.0
 BuildRequires:	glibc-devel >= 6:2.3.6-19
-BuildRequires:	php-devel >= 3:5.0.0
-BuildRequires:	rpmbuild(macros) >= 1.344
+BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Requires:	php(core) >= 5.0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
