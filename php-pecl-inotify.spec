@@ -5,7 +5,7 @@ Summary:	%{modname} - php bindings
 Summary(pl.UTF-8):	%{modname} - dowiązania php
 Name:		%{php_name}-pecl-%{modname}
 Version:	0.1.6
-Release:	4
+Release:	5
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
