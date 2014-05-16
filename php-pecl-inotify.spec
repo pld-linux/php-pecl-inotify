@@ -5,18 +5,18 @@ Summary:	%{modname} - php bindings
 Summary(pl.UTF-8):	%{modname} - dowiązania php
 Name:		%{php_name}-pecl-%{modname}
 Version:	0.1.6
-Release:	5
+Release:	6
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	c7d837c4837d8132c451c6ab37ef917e
 URL:		http://pecl.php.net/package/inotify/
-BuildRequires:	%{php_name}-devel >= 3:5.0.0
+BuildRequires:	%{php_name}-devel >= 3:5.0.4
 BuildRequires:	glibc-devel >= 6:2.3.6-19
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
-Requires:	php(core) >= 5.0.4
 Provides:	php(%{modname}) = %{version}
+Obsoletes:	php-pecl-inotify < 0.1.6-5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
